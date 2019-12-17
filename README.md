@@ -3,7 +3,7 @@
 ## Setup
 
 ```
-yarn install
+npm install
 cp .env.sample .env
 ```
 
@@ -15,10 +15,18 @@ Edit `.env` to specify credentials.
 
 ## Run
 
+Client
 ```
-yarn server
+$ npm start
 ```
-
+Subscription
+```
+$ node notifications.js
+```
+SIP Registration
+```
+$ node index.js
+```
 
 ## Test
 
@@ -35,7 +43,7 @@ But for this demo we simply append the data to an audio file `audio.raw`.
 You can play the saved audio by:
 
 ```
-play -b 16 -e signed -c 1 -r 8000 audio.raw
+play -c 1 -r 16000 -e signed -b 16 audio.raw
 ```
 
 The audio content should be same as the incoming call to `RINGCENTRAL_AGENT_EXT` we made.
