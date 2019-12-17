@@ -15,6 +15,14 @@ Edit `.env` to specify credentials.
 
 ## Run
 
+Ngrok tunnel
+```
+$ ngrok http 5001
+```
+Copy the ngrok address and specify it in the .env as follow:
+
+`DELIVERY_MODE_ADDRESS=https://7ba3f616.ngrok.io/webhookcallback'
+
 Client
 ```
 $ npm start
