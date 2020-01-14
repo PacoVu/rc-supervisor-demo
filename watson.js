@@ -1,5 +1,4 @@
 const WS = require('ws')
-//var watson = require('watson-developer-cloud');
 var request = require('request')
 var fs = require('fs')
 var server = require('./index')
@@ -16,7 +15,7 @@ function WatsonEngine() {
   this.wsURI = 'wss://stream.watsonplatform.net/speech-to-text/api/v1/recognize?watson-token=[TOKEN]&model=en-US_NarrowbandModel&x-watson-learning-opt-out=1';
   var getTokenForm = {
     method: 'GET',
-    uri: 'https://'+process.env.WATSON_USERNAME+':'+ process.env.WATSON_PASSWORD+'@stream.watsonplatform.net/authorization/api/v1/token?url=https://stream.watsonplatform.net/speech-to-text/api',
+    uri: 'https://'+process.env.WATSON_SPEECH_TO_TEXT_USERNAME+':'+ process.env.WATSON_SPEECH_TO_TEXT_PASSWORD+'@stream.watsonplatform.net/authorization/api/v1/token?url=https://stream.watsonplatform.net/speech-to-text/api',
   };
   this.naturalLanguageUnderstanding = new NaturalLanguageUnderstandingV1({
     version: '2019-07-12',
