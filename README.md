@@ -19,6 +19,7 @@ Edit `.env` to specify credentials.
  - `WATSON_NATURAL_LANGUAGE_UNDERSTANDING_API_KEY` is your Watson NLU service API key
 
 ## Run the demo
+Open 4 terminal windows and run the following command on each window
 
 Ngrok tunnel
 ```
